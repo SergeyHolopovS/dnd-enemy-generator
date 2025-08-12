@@ -1,0 +1,41 @@
+@reference '../../globals.css';
+
+.container {
+  @apply relative;
+}
+
+.button {
+  @apply text-start w-full h-15 rounded-2xl px-5 text-2xl text-white/50 cursor-pointer;
+  line-height: 24px;
+  outline: 1px solid rgba(255, 255, 255, 0.5);
+  transition-duration: 200ms;
+}
+
+.blur {
+  @apply fixed left-0 top-0 w-screen h-screen z-1 text-transparent select-none;
+}
+
+.button-focus {
+  @apply text-white;
+  outline-color: white;
+}
+
+.choose {
+  @apply absolute z-50 left-0 top-18 w-full p-4 rounded-2xl bg-[#262626];
+  transition-duration: 200ms;
+}
+
+.choose-content {
+  @apply max-h-50 w-full flex-col flex overflow-auto;
+  scrollbar-width: thin;
+}
+
+.el {
+  @apply text-white px-4 py-1 rounded-lg cursor-pointer text-start;
+  width: calc(100% - 8px);
+  line-height: 40px;
+  transition-duration: 200ms;
+  &:hover {
+    @apply bg-white/15;
+  }
+}

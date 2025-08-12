@@ -1,0 +1,40 @@
+@reference '../../../globals.css';
+
+.content {
+  @apply w-full h-30 p-1 flex items-center justify-center flex-col gap-2;
+}
+
+.label {
+    @apply compact:text-lg normal-mobile:text-[16px] text-[10px];
+}
+
+.incrementer {
+  @apply w-full h-full flex justify-center gap-0 text-background;
+  // Чуть чуть нарушил dont repeat yourself, но проект быстрый и мне лень думать над этим
+  // Простите...
+  .incrementer-minus {
+    @apply h-full w-1/4 flex justify-center items-center cursor-pointer bg-white/70;
+    border-radius: 10px 0 0 10px;
+    transition-duration: 200ms;
+    &:hover {
+        @apply bg-white/90;
+    }
+  }
+  .incrementer-minus-figure {
+    @apply h-1 w-1/2 bg-background text-transparent;
+  }
+  .incrementer-plus {
+    @apply h-full w-1/4 flex justify-center items-center cursor-pointer bg-white/70 text-4xl;
+    line-height: 36px;
+    border-radius: 0 10px 10px 0;
+    font-weight: 600;
+    transition-duration: 200ms;
+    &:hover {
+        @apply bg-white/90;
+    }
+  }
+  .incrementer-content {
+    @apply w-1/2 bg-white h-full flex items-center justify-center text-2xl;
+    font-weight: 700;
+  }
+}
