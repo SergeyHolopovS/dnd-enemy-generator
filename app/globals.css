@@ -12,6 +12,7 @@
   --font-mono: var(--font-geist-mono);
   --breakpoint-normal-mobile: 480px;
   --breakpoint-compact: 1000px;
+  --breakpoint-semi-compact: 1500px;
   --breakpoint-full: 1900px;
 }
 

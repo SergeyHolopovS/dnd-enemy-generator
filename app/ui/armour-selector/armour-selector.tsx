@@ -12,9 +12,15 @@ export default function ArmourSelector({ value, onChange }: Props) {
   const [focus, setFocus] = useState<boolean>(false);
   return (
     <div className={styles.container}>
-      {
-        focus && <button type="button" className={styles.blur} onClick={() => setFocus(false)}>...</button>
-      }
+      {focus && (
+        <button
+          type="button"
+          className={styles.blur}
+          onClick={() => setFocus(false)}
+        >
+          ...
+        </button>
+      )}
       <button
         type="button"
         onClick={() => setFocus((prev) => !prev)}
@@ -22,7 +28,7 @@ export default function ArmourSelector({ value, onChange }: Props) {
       >
         {value !== undefined
           ? `${value} КД${armours[value].armour}${
-              armours[value].dexterity && "+ЛОВ"
+              armours[value].dexterity ? "+ЛОВ" : ""
             }${
               armours[value].dexterityMax !== undefined
                 ? `(МАКС ${armours[value].dexterityMax})`

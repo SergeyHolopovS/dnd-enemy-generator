@@ -5,7 +5,7 @@
 }
 
 .content {
-  @apply compact:w-1/3 w-full compact:p-0 p-4 flex flex-col gap-3;
+  @apply semi-compact:w-1/3 compact:w-1/2 w-full compact:p-0 p-4 flex flex-col gap-3;
 }
 
 .header {
