@@ -78,9 +78,11 @@ export default function Home() {
       `Броня: ${data.armour} ${armour.type} ${armour.armour}${
         armour.dexterity &&
         `+ЛОВ${
-          armour.dexterityMax !== undefined && ` (МАКС ${armour.dexterityMax})`
+          armour.dexterityMax !== undefined
+            ? ` (МАКС ${armour.dexterityMax})`
+            : ""
         }`
-      }${armour.stealth && " (Помеха стелсу)"}\n` +
+      }${armour.stealth ? " (Помеха стелсу)" : ""}\n` +
       `Оружие: ${data.weapon.name} ${data.weapon.damage} (${data.weapon.properties})\n` +
       `Характеристики:\n${[
         data.power,
@@ -92,7 +94,7 @@ export default function Home() {
       ]
         .map(
           (el, index) =>
-            `\t${сharacteristics[index]} ${el} (${countModificator(el)})`
+            `\t ${сharacteristics[index]} ${el} (${countModificator(el)})`
         )
         .join("\n")}\n` +
       (data.spells && data.spells.length > 0
