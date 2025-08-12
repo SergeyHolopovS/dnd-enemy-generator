@@ -9,32 +9,32 @@
 }
 
 .incrementer {
-  @apply w-full h-full flex justify-center gap-0 text-background;
+  @apply w-full h-full flex justify-center gap-0 text-foreground;
   // Чуть чуть нарушил dont repeat yourself, но проект быстрый и мне лень думать над этим
   // Простите...
   .incrementer-minus {
-    @apply h-full w-1/4 flex justify-center items-center cursor-pointer bg-white/70;
+    @apply h-full w-1/4 flex justify-center items-center cursor-pointer bg-foreground/30;
     border-radius: 10px 0 0 10px;
     transition-duration: 200ms;
     &:hover {
-        @apply bg-white/90;
+        @apply bg-foreground/40;
     }
   }
   .incrementer-minus-figure {
-    @apply h-1 w-1/2 bg-background text-transparent;
+    @apply h-1 w-1/2 bg-foreground text-transparent;
   }
   .incrementer-plus {
-    @apply h-full w-1/4 flex justify-center items-center cursor-pointer bg-white/70 text-4xl;
+    @apply h-full w-1/4 flex justify-center items-center cursor-pointer bg-foreground/30 text-4xl;
     line-height: 36px;
     border-radius: 0 10px 10px 0;
     font-weight: 600;
     transition-duration: 200ms;
     &:hover {
-        @apply bg-white/90;
+        @apply bg-foreground/40;
     }
   }
   .incrementer-content {
-    @apply w-1/2 bg-white h-full flex items-center justify-center text-2xl;
+    @apply w-1/2 h-full flex items-center justify-center text-2xl bg-foreground/40;
     font-weight: 700;
   }
 }

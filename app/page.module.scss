@@ -1,7 +1,8 @@
 @reference './globals.css';
 
 .wrapper {
-  @apply w-screen flex compact:pt-15 compact:pb-10 justify-center overflow-x-hidden bg-background text-white;
+  @apply w-screen flex compact:pt-15 compact:pb-10 justify-center overflow-x-hidden text-foreground;
+  background-color: var(--background);
 }
 
 .content {
@@ -22,15 +23,15 @@
 }
 
 .input {
-  @apply w-full h-15 rounded-2xl p-5 text-2xl text-white/50;
-  outline: 1px solid rgba(255, 255, 255, 0.5);
+  @apply w-full h-15 rounded-2xl p-5 text-2xl text-foreground/50;
+  outline: 1px solid rgba(var(--foreground-rgb), 0.5);
   transition-duration: 200ms;
   &::placeholder {
-    @apply text-white/50;
+    @apply text-foreground/50;
   }
   &:focus {
-    @apply text-white;
-    outline-color: white;
+    @apply text-foreground;
+    outline-color: var(--foreground);
     &::placeholder {
       @apply opacity-0;
     }

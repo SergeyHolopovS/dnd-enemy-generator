@@ -5,9 +5,9 @@
 }
 
 .button {
-  @apply text-start w-full h-15 rounded-2xl px-5 text-2xl text-white/50 cursor-pointer;
+  @apply text-start w-full h-15 rounded-2xl px-5 text-2xl text-foreground/50 cursor-pointer;
   line-height: 24px;
-  outline: 1px solid rgba(255, 255, 255, 0.5);
+  outline: 1px solid rgba(var(--foreground-rgb), 0.5);
   transition-duration: 200ms;
 }
 
@@ -16,13 +16,14 @@
 }
 
 .button-focus {
-  @apply text-white;
-  outline-color: white;
+  @apply text-foreground;
+  outline-color: var(--foreground);
 }
 
 .choose {
-  @apply absolute z-50 left-0 top-18 w-full p-4 rounded-2xl bg-[#262626];
+  @apply absolute z-50 left-0 top-18 w-full p-4 rounded-2xl;
   transition-duration: 200ms;
+  background-color: var(--choose);
 }
 
 .choose-content {
@@ -31,11 +32,11 @@
 }
 
 .el {
-  @apply text-white px-4 py-1 rounded-lg cursor-pointer text-start;
+  @apply text-foreground px-4 py-1 rounded-lg cursor-pointer text-start;
   width: calc(100% - 8px);
   line-height: 40px;
   transition-duration: 200ms;
   &:hover {
-    @apply bg-white/15;
+    @apply bg-foreground/15;
   }
 }
